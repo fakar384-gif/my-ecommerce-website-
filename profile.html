@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html" class="product-link">ShopNest</a></div>
+        <div class="nav-icons">
+            <button id="themeToggle" class="icon-btn">🌙</button>
+            <div class="cart-icon">🛒 <span id="cart-count" class="badge">0</span></div>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <main class="profile-container">
+        
+        <!-- Left Sidebar (User Info) -->
+        <aside class="profile-sidebar">
+            <div class="profile-avatar">👤</div>
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileEmail" class="text-muted">Loading...</p>
+            
+            <ul class="profile-menu">
+                <li class="active">📦 My Orders</li>
+                <li>⚙️ Account Settings</li>
+            </ul>
+            
+            <button id="logoutBtn" class="logout-btn">🔴 Logout</button>
+        </aside>
+
+        <!-- Right Content (Order History) -->
+        <section class="profile-content">
+            <h2 class="section-title">Order History</h2>
+            
+            <div id="orderListContainer" class="order-list">
+                <p>Loading your orders...</p>
+                <!-- Orders will be injected here by JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Cart Drawer (আগের মতোই) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Cart 🛒</h2>
+            <button class="close-cart-btn" id="closeCartBtn">✖</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Subtotal:</span><span id="cartTotalAmount">$0.00</span></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

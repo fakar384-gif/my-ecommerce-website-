@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest - Premium E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">ShopNest</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="nav-icons">
+            <button id="themeToggle" class="icon-btn">🌙</button>
+            <div class="cart-icon">
+                🛒 <span id="cart-count" class="badge">0</span>
+            </div>
+            <a href="login.html" id="authLink" style="text-decoration:none; color:inherit; font-weight:600;">👤 Login</a>
+        </div>
+    </header>
+
+    <section class="categories-section">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-container">
+            <div class="category-box active" data-category="all">
+                <div class="category-icon">🛍️</div>
+                <span>All</span>
+            </div>
+            <div class="category-box" data-category="electronics">
+                <div class="category-icon">🎧</div>
+                <span>Electronics</span>
+            </div>
+            <div class="category-box" data-category="wearables">
+                <div class="category-icon">⌚</div>
+                <span>Wearables</span>
+            </div>
+            <div class="category-box" data-category="sports">
+                <div class="category-icon">🏃‍♂️</div>
+                <span>Sports</span>
+            </div>
+            <div class="category-box" data-category="accessories">
+                <div class="category-icon">🖱️</div>
+                <span>Accessories</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">
+                Loot Deals & <span style="color: #ff9900;">Extra Cashback!</span>
+            </h1>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Shop your favorite products from Flipkart & Amazon and earn guaranteed UPI cashback on every order.
+            </p>
+            <button class="shop-now-btn">Shop Now</button>
+            <div class="flash-sale">
+                <span>⚡ Flash Sale Ends In:</span>
+                <span id="countdown">02:45:30</span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="promo-banner" style="max-width: 1200px; margin: 2rem auto; padding: 0 5%;">
+    <a href="https://fktr.in/6Qj9B3o" target="_blank" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+        <img src="https://i.postimg.cc/NF7G6VMg/file-00000000629871fa8c569b1aba56bb32.png" alt="Mega Offer Banner" style="width: 100%; height: auto; display: block; object-fit: cover;">
+    </a>
+    </div>
+
+    <section class="products-section">
+        <h2 class="section-title">Featured Products</h2>
+        
+        <div class="product-grid" id="featuredProducts">
+            <p style="text-align: center; width: 100%; font-weight: bold;">Loading awesome products... ⏳</p>
+        </div>
+    </section>
+
+    <section style="max-width: 800px; margin: 3rem auto; padding: 2rem; background: #e8f5e9; border: 2px dashed #4caf50; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h2 style="text-align: center; color: #2e7d32; margin-bottom: 1.5rem; font-size: 1.5rem;">💰 How to Claim Your Extra Cashback</h2>
+        
+        <ul style="list-style: none; padding: 0; color: #333; line-height: 1.8; font-size: 1.05rem;">
+            <li style="margin-bottom: 12px;">
+                ✅ <b>Step 1 (Order):</b> Click the "Buy Now" button on our website and order your favorite product directly from Flipkart or Amazon.
+            </li>
+            <li style="margin-bottom: 12px;">
+                ✅ <b>Step 2 (Screenshot):</b> Once your order is successfully confirmed, take a clear screenshot showing the 'Order ID'.
+            </li>
+            <li style="margin-bottom: 12px;">
+                ✅ <b>Step 3 (Message):</b> Click the WhatsApp or Telegram link below the product and send the screenshot along with your UPI ID to our admin.
+            </li>
+            <li style="margin-bottom: 12px;">
+                ✅ <b>Step 4 (Get Cashback):</b> After you receive the product and its return window (usually 7-10 days) is over, your cashback will be sent directly to your <b>GPay, PhonePe, or Paytm</b> number!
+            </li>
+        </ul>
+        
+        <p style="text-align: center; font-size: 0.95rem; color: #d32f2f; margin-top: 15px; font-weight: bold;">
+            ⚠️ T&C: If you cancel or return the product for any reason, the cashback offer will be strictly invalid.
+        </p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>ShopNest</h3>
+                <p>Your one-stop destination for premium products. Experience the best online shopping with fast delivery and secure payments.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Cart 🛒</h2>
+            <button class="close-cart-btn" id="closeCartBtn">✖</button>
+        </div>
+        
+        <div class="cart-items-container" id="cartItemsContainer">
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartTotalAmount">$0.00</span>
+            </div>
+            <a href="checkout.html" class="checkout-btn" style="text-align:center; text-decoration:none; display:block;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  <a href="https://t.me/shopnest0" target="_blank" class="telegram-float">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+        <span>Join Telegram</span>
+    </a>
+</body>
+</html>

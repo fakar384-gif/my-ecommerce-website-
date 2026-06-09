@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html" class="product-link">ShopNest</a></div>
+        <div class="nav-icons">
+            <button id="themeToggle" class="icon-btn">🌙</button>
+        </div>
+    </header>
+
+    <!-- Authentication Section -->
+    <main class="auth-page">
+        <div class="auth-container">
+            
+            <!-- 🔑 Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <h2 class="auth-title">Welcome Back 👋</h2>
+                <p class="auth-subtitle">Login to your ShopNest account</p>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="auth-options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="auth-submit-btn">Login</button>
+                
+                <div class="google-login">
+                    <button type="button" class="google-btn">
+                        🌐 Login with Google
+                    </button>
+                </div>
+
+                <p class="switch-auth">Don't have an account? <span id="showRegister">Sign Up</span></p>
+            </form>
+
+            <!-- 📝 Registration Form (Hidden by Default) -->
+            <form id="registerForm" class="auth-form">
+                <h2 class="auth-title">Create Account 🚀</h2>
+                <p class="auth-subtitle">Join ShopNest today!</p>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a strong password" required>
+                </div>
+
+                <button type="submit" class="auth-submit-btn">Register</button>
+
+                <p class="switch-auth">Already have an account? <span id="showLogin">Login</span></p>
+            </form>
+
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

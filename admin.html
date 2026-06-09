@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - ShopNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .admin-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        .admin-form .form-group {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .admin-form label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .admin-form input, .admin-form select {
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            outline: none;
+        }
+        .upload-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">ShopNest Admin</div>
+        <div class="nav-icons">
+            <a href="index.html" class="product-link" style="text-decoration:none; font-weight:bold;">🏠 Go to Website</a>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <h2 class="admin-title" id="formTitle">⚙️ Upload New Product</h2>
+        
+        <form id="adminProductForm" class="admin-form">
+            <div class="form-group">
+                <label>Product Title</label>
+                <input type="text" id="pTitle" placeholder="E.g: iPhone 15 Pro Max" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Category</label>
+                <select id="pCategory" required>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="wearables">Wearables</option>
+                    <option value="sports">Sports</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Original Price (MRP)</label>
+                <input type="number" id="pOriginalPrice" placeholder="E.g: 1499" required>
+            </div>
+
+            <div class="form-group">
+                <label>Price (Current/Discounted)</label>
+                <input type="number" id="pPrice" placeholder="E.g: 999" required>
+            </div>
+
+            <div class="form-group">
+                <label>Product Image 1 (Main)</label>
+                <input type="url" id="pImage1" placeholder="Paste main image link here" required>
+            </div>
+            <div class="form-group">
+                <label>Product Image 2 (Optional)</label>
+                <input type="url" id="pImage2" placeholder="Paste 2nd image link here">
+            </div>
+            <div class="form-group">
+                <label>Product Image 3 (Optional)</label>
+                <input type="url" id="pImage3" placeholder="Paste 3rd image link here">
+            </div>
+
+            <div class="form-group">
+                <label>🔗 Affiliate Short Link (Amazon/Flipkart)</label>
+                <input type="url" id="pAffiliateLink" placeholder="Paste your short link here" required>
+            </div>
+
+            <button type="submit" class="upload-btn" id="uploadBtn">🚀 Upload Product</button>
+        </form>
+    </main>
+
+    <main class="admin-container" style="margin-top: 1rem;">
+        <h2 class="admin-title">🛠️ Manage Products</h2>
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="adminProductList">
+                    <tr><td colspan="3" style="text-align:center;">Loading products...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
